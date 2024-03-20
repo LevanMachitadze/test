@@ -3,3 +3,89 @@
   padding: 0;
   box-sizing: border-box;
 }
+.clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  border: 5px solid blue;
+  margin: 0 auto;
+}
+.arrow-vertical {
+  width: 3px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+}
+.arrow-60 {
+  top: 0;
+  left: 50%;
+}
+.arrow-30 {
+  bottom: 0px;
+  left: 50%;
+}
+.arrow-horizontal {
+  width: 10px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+}
+.arrow-45 {
+  top: 50%;
+}
+.arrow-15 {
+  top: 50%;
+  right: 0px;
+}
+.main-arrow {
+  height: 45%;
+  width: 5px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center 0%;
+  rotate: 90deg;
+  animation-name: timer;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.arrow-45::after {
+  content: "45";
+  position: absolute;
+  top: -15px;
+  left: 12px;
+  font-size: 26px;
+}
+.arrow-15::after {
+  content: "15";
+  position: absolute;
+  font-size: 26px;
+  right: 12px;
+  top: -15px;
+}
+
+.arrow-30::after {
+  content: "30";
+  position: absolute;
+  font-size: 26px;
+  bottom: 10px;
+  left: -10px;
+}
+.arrow-60::after {
+  content: "60";
+  position: absolute;
+  font-size: 26px;
+  top: 10px;
+  left: -10px;
+}
+@keyframes timer {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
