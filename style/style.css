@@ -89,3 +89,25 @@
     transform: rotate(360deg);
   }
 }
+.small-arrow {
+  height: 15%;
+  width: 5px;
+  background-color: green;
+  position: absolute;
+  top: 25%;
+  transform-origin: center 0%;
+  rotate: 90deg;
+  animation-name: timer;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.right {
+  left: 35%;
+}
+.left {
+  right: 25%;
+}
+.reverse:focus + .clock .arr {
+  animation-direction: reverse;
+}
